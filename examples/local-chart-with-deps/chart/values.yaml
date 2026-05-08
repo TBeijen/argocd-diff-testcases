@@ -1,0 +1,3 @@
+ingress-nginx:
+  controller:
+    ingressClass: "test"

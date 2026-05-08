@@ -1,0 +1,14 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: local-chart-with-deps
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    name: in-cluster
+    namespace: default
+  source:
+    repoURL: https://github.com/TBeijen/argocd-diff-testcases
+    path: examples/local-chart-with-deps/chart
+    targetRevision: pr-1
