@@ -19,4 +19,4 @@ spec:
         valueFiles:
           - $local-files/examples/helm/values/filtered.yaml
         valuesObject:
-          replicaCount: 5
+          replicaCount: 3
