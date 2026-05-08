@@ -6,8 +6,9 @@
 * Active kubeconfig pointing to the local cluster
 * Binary `argocd-diff-preview` on path
 
-
 ## Commands
+
+Installing argocd
 
 ```sh
 helm upgrade argo-cd argo/argo-cd \
@@ -15,6 +16,16 @@ helm upgrade argo-cd argo/argo-cd \
     --namespace argocd-diff-preview \
     --install \
     -f my-values.yaml
+```
+
+Checkouts
+
+```sh
+rm -rf base-branch
+rm -rf target-branch
+
+git clone https://github.com/TBeijen/argocd-diff-testcases base-branch --depth 1 -q
+git clone https://github.com/TBeijen/argocd-diff-testcases target-branch --depth 1 -q -b pr-1
 ```
 
 ```sh
